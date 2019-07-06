@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-dotnet: 2.2.107
+dotnet: 2.1.4
 
 script:
     - dotnet build "MiLib NetCore.sln" -c Release
