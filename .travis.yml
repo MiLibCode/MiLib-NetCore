@@ -1,6 +1,12 @@
 language: csharp
 mono: none
 dotnet: 2.1.502
+dist: trusty
+sudo: required
+solution: "MiLib NetCore.sln"
 
+install:
+ - dotnet restore
+ 
 script:
     - dotnet build -c Release
