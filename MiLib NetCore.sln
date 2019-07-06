@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{88E9410B-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibNetCore.Core", "src\MiLibNetCore.Core\MiLibNetCore.Core.csproj", "{6068A994-BFD1-4515-8832-0191FFBE0496}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibNetCore.Core.Test", "test\MiLibNetCore.Core.Test\MiLibNetCore.Core.Test.csproj", "{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{6068A994-BFD1-4515-8832-0191FFBE0496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6068A994-BFD1-4515-8832-0191FFBE0496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6068A994-BFD1-4515-8832-0191FFBE0496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6068A994-BFD1-4515-8832-0191FFBE0496} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
+		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7} = {88E9410B-223B-4185-AD3E-3EDFDC83A57D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34B8C4A4-5CE7-42CD-B6E8-5C18F7D749C8}
