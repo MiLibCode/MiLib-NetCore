@@ -7,3 +7,4 @@ solution: "MiLib NetCore.sln"
 
 script:
     - dotnet build -c Release
+    - dotnet test "test/MiLibNetCore.Core.Test/" -c Release
