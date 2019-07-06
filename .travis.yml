@@ -4,4 +4,4 @@ dotnet: 2.1.4
 
 script:
     - dotnet build "MiLib NetCore.sln" -c Release
-    - dotnet test "test/MiLibNetCore.Core.Test/" -c Release
+
