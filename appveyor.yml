@@ -3,7 +3,7 @@ image: Visual Studio 2017
 branches:
   only:
   – master
-  
+# scripts that are called at very beginning, before repo cloning
 init:
   # Best practice (Windows line endings different to Unix/Linux)
   – cmd: git config –global core.autocrlf true
