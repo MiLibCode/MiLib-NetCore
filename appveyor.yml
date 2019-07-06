@@ -1,0 +1,36 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  – master
+init:
+  # Best practice (Windows line endings different to Unix/Linux)
+  – cmd: git config –global core.autocrlf true
+install:
+  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
+ 
+before_build:
+  # Display .NET Core version
+  – cmd: dotnet –version
+  # Display minimal restore text
+  – cmd: dotnet restore ./src/MiLibNetCore.Core/MiLibNetCore.Core.csproj –verbosity m
+  - cmd: dotnet restore ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj --verbosity m
+build_script:  
+  – cmd: dotnet build ./src/MiLibNetCore.Core/MiLibNetCore.Core.csproj -c Release
+  - cmd: dotnet build ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj -c Release
+  – cmd: dotnet pack  -c Release /p:PackageVersion=1.0.{build}
+
+test_script:
+    - cmd: dotnet test ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj -c Release
+    
+artifacts:
+    # Store NuGet packages
+  - path: ./src/MiLibNetCore.Core/bin/Release/*.nupkg
+    name: NuGet
+  
+after_build:
+  # For once the build has completed
+ 
+on_finish :
+  # any cleanup in here
+deploy: off
