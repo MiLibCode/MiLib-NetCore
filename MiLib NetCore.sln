@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{722D66D5-8440-4444-A83B-A25A47D887D4}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
+		build.ps1 = build.ps1
 		common.props = common.props
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
