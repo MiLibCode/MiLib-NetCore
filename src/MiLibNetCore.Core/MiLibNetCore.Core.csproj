@@ -1,14 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <!-- Import parent Directory.build.props -->
+  <!--<Import Project="..\..\common.props" />-->
+  <!--<Import Project="..\..\Directory.Build.props" />-->
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace />
     <LangVersion>latest</LangVersion>
-    <Company>Moses Ibiwoye</Company>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionSuffix>1</VersionSuffix>
+    <PackageVersion>1.0.0</PackageVersion>
+    <!--<Company>Moses Ibiwoye</Company>
     <Authors>Moses Ibiwoye</Authors>
     <Description>General library utilities based on NetStandard.</Description>
     <Copyright>Copyright © 2019 Moses Ibiwoye</Copyright>
-    <RepositoryType>git</RepositoryType>
+    <RepositoryType>git</RepositoryType>-->
   </PropertyGroup>
 
   <ItemGroup>

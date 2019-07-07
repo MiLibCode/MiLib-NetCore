@@ -1,0 +1,25 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Company>Moses Ibiwoye</Company>
+    <Authors>Moses Ibiwoye</Authors>
+    <Product>MiLib NetCore</Product>
+    <Description>General library utilities based on NetStandard.</Description>
+    <Copyright>Copyright © 2019 Moses Ibiwoye</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/MiLibCode/MiLib-NetCore/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MiLibCode/MiLib-NetCore/</PackageProjectUrl>
+    <!--<SourceLinkEnabled>true</SourceLinkEnabled>-->
+  </PropertyGroup>
+
+  <!--<ItemGroup Condition="'$(IsTestProject)' != 'true' and '$(SourceLinkEnabled)' != 'false'">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19351-01" PrivateAssets="All"/>
+  </ItemGroup>-->
+
+</Project>

@@ -33,6 +33,18 @@ namespace System.Collections.Generic
             source.Insert(source.Count, item);
         }
 
+        public static void InsertAfter<T>(this IList<T> source, T existingItem, T item)
+        {
+            var index = source.IndexOf(existingItem);
+            if (index < 0)
+            {
+                source.AddFirst(item);
+                return;
+            }
+
+            source.Insert(index + 1, item);
+        }
+
         public static void InsertAfter<T>(this IList<T> source, Predicate<T> selector, T item)
         {
             var index = source.FindIndex(selector);
@@ -45,6 +57,17 @@ namespace System.Collections.Generic
             source.Insert(index + 1, item);
         }
 
+        public static void InsertBefore<T>(this IList<T> source, T existingItem, T item)
+        {
+            var index = source.IndexOf(existingItem);
+            if (index < 0)
+            {
+                source.AddLast(item);
+                return;
+            }
+
+            source.Insert(index, item);
+        }
 
         public static void InsertBefore<T>(this IList<T> source, Predicate<T> selector, T item)
         {
