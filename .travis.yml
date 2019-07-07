@@ -1,6 +1,10 @@
 language: csharp
 mono: none
-dotnet: 2.1.4
+dotnet: 2.2.101
+dist: xenial
+sudo: required
+solution: "MiLib NetCore.sln"
 
 script:
-    - dotnet build "MiLib NetCore.sln" -c Release
+    - dotnet build -c Release
+    - dotnet test "test/MiLibNetCore.Core.Test/" -c Release
