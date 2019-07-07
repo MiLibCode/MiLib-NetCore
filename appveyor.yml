@@ -26,7 +26,7 @@ build:
   verbosity: minimal
 
 build_script:
-- ps: dotnet build Rdd.sln -c Debug -v minimal
+- ps: dotnet build -c Debug -v minimal
 
 test_script:
 - cmd: dotnet test ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj 
