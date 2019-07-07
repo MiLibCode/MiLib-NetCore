@@ -4,11 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace />
     <LangVersion>latest</LangVersion>
-    <Company>Moses Ibiwoye</Company>
+    <!--<Company>Moses Ibiwoye</Company>
     <Authors>Moses Ibiwoye</Authors>
     <Description>General library utilities based on NetStandard.</Description>
     <Copyright>Copyright © 2019 Moses Ibiwoye</Copyright>
-    <RepositoryType>git</RepositoryType>
+    <RepositoryType>git</RepositoryType>-->
   </PropertyGroup>
 
   <ItemGroup>

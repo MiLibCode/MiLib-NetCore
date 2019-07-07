@@ -7,9 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{51BC64DB-9DB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{88E9410B-223B-4185-AD3E-3EDFDC83A57D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibNetCore.Core", "src\MiLibNetCore.Core\MiLibNetCore.Core.csproj", "{6068A994-BFD1-4515-8832-0191FFBE0496}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.Core", "src\MiLibNetCore.Core\MiLibNetCore.Core.csproj", "{6068A994-BFD1-4515-8832-0191FFBE0496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibNetCore.Core.Test", "test\MiLibNetCore.Core.Test\MiLibNetCore.Core.Test.csproj", "{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.Core.Test", "test\MiLibNetCore.Core.Test\MiLibNetCore.Core.Test.csproj", "{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{722D66D5-8440-4444-A83B-A25A47D887D4}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
