@@ -1,0 +1,35 @@
+version: 1.0.{build}
+branches:
+  only:
+  - master
+image: Visual Studio 2017
+init:
+- cmd: git config –global core.autocrlf true
+install:
+- appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
+before_build:
+- cmd: >-
+    # Display .NET Core version
+
+    dotnet –version
+
+    # Display minimal restore text
+
+    dotnet restore ./src/MiLibNetCore.Core/MiLibNetCore.Core.csproj –verbosity m
+
+    dotnet restore ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj --verbosity m
+build:
+  project: MiLib NetCore.sln
+  verbosity: minimal
+build_script:
+- cmd: >-
+    dotnet build ./src/MiLibNetCore.Core/MiLibNetCore.Core.csproj -c Release
+
+    dotnet build ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj -c Release
+
+    dotnet pack  -c Release /p:PackageVersion=1.0.{build}
+test_script:
+- cmd: dotnet test ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj -c Release
+artifacts:
+- path: ./src/MiLibNetCore.Core/bin/Release/*.nupkg
+  name: NuGet
