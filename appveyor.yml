@@ -1,8 +1,7 @@
 version: '1.0.{build}'
 image: Visual Studio 2017
 branches:
-  only:
-– master
+  only: – master
 init:
   # Best practice (Windows line endings different to Unix/Linux)
   – cmd: git config –global core.autocrlf true
