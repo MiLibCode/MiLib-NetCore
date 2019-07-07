@@ -13,8 +13,6 @@ before_build:
 
     dotnet –version
 
-    # Display minimal restore text
-
     dotnet restore ./src/MiLibNetCore.Core/MiLibNetCore.Core.csproj –verbosity m
 
     dotnet restore ./test/MiLibNetCore.Core.Test/MiLibNetCore.Core.Test.csproj --verbosity m
