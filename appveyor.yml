@@ -3,7 +3,7 @@ image: Visual Studio 2017
 branches:
   only: 
   – master
-  - production
+  - first-release
 init:
   # Best practice (Windows line endings different to Unix/Linux)
   – cmd: git config –global core.autocrlf true
