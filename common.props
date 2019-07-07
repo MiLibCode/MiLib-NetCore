@@ -5,7 +5,7 @@
 
   <PropertyGroup>
     <VersionPrefix>1.0.1</VersionPrefix>
-    <VersionSuffix>01</VersionSuffix>
+    <VersionSuffix>alpha</VersionSuffix>
     <PackageVersion>1.0.0</PackageVersion>
     <Company>Moses Ibiwoye</Company>
     <Authors>Moses Ibiwoye</Authors>
@@ -15,7 +15,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/MiLibCode/MiLib-NetCore/</RepositoryUrl>
     <PackageProjectUrl>https://github.com/MiLibCode/MiLib-NetCore/</PackageProjectUrl>
-    <SourceLinkEnabled>true</SourceLinkEnabled>
+    <!--<SourceLinkEnabled>true</SourceLinkEnabled>-->
   </PropertyGroup>
 
   <!--<ItemGroup Condition="'$(IsTestProject)' != 'true' and '$(SourceLinkEnabled)' != 'false'">
