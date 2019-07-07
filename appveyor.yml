@@ -1,7 +1,8 @@
 version: '1.0.{build}'
 image: Visual Studio 2017
-branches:
-  only: – master
+#branches:
+#  only: 
+#  – master
 init:
   # Best practice (Windows line endings different to Unix/Linux)
   – cmd: git config –global core.autocrlf true
@@ -9,7 +10,7 @@ install:
  
 before_build:
   # Display .NET Core version
-  #– cmd: dotnet –version
+  – cmd: dotnet –version
   # Display minimal restore text
   – cmd: dotnet restore ./src/MiLibNetCore.Core/MiLibNetCore.Core.csproj –verbosity m
 build_script:
