@@ -7,6 +7,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace />
     <LangVersion>latest</LangVersion>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionSuffix>1</VersionSuffix>
+    <PackageVersion>1.0.0</PackageVersion>
     <!--<Company>Moses Ibiwoye</Company>
     <Authors>Moses Ibiwoye</Authors>
     <Description>General library utilities based on NetStandard.</Description>
