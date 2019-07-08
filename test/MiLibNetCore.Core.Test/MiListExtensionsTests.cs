@@ -5,7 +5,7 @@ using Xunit;
 
 namespace MiLibNetCore.Core.Test
 {
-    public class AbpListExtensionsTests
+    public class MiListExtensionsTests
     {
         [Fact]
         public void InsertAfter()
