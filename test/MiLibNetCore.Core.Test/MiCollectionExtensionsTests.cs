@@ -4,7 +4,7 @@ using Xunit;
 
 namespace MiLibNetCore.Core.Test
 {
-    public class AbpCollectionExtensionsTests
+    public class MiCollectionExtensionsTests
     {
         [Fact]
         public void AddIfNotContains_With_Predicate()
