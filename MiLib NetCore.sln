@@ -13,11 +13,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.Core.Test", "t
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{722D66D5-8440-4444-A83B-A25A47D887D4}"
 	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
 		appveyor.yml = appveyor.yml
 		build.ps1 = build.ps1
 		common.props = common.props
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.Domain", "src\MiLibNetCore.Domain\MiLibNetCore.Domain.csproj", "{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.EntityFrameworkCore", "src\MiLibNetCore.EntityFrameworkCore\MiLibNetCore.EntityFrameworkCore.csproj", "{AFB6997F-02CA-48DB-8297-A21955C4CAC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,14 @@ Global
 		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +53,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6068A994-BFD1-4515-8832-0191FFBE0496} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
 		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7} = {88E9410B-223B-4185-AD3E-3EDFDC83A57D}
+		{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
+		{AFB6997F-02CA-48DB-8297-A21955C4CAC5} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34B8C4A4-5CE7-42CD-B6E8-5C18F7D749C8}

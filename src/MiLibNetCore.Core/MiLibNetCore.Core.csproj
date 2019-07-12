@@ -8,9 +8,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace />
     <LangVersion>latest</LangVersion>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.2.1</VersionPrefix>
     <VersionSuffix>1</VersionSuffix>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.2.1</PackageVersion>
     <!--<Company>Moses Ibiwoye</Company>
     <Authors>Moses Ibiwoye</Authors>
     <Description>General library utilities based on NetStandard.</Description>
@@ -20,6 +20,10 @@
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MiLibNetCore\Data\" />
   </ItemGroup>
 
 </Project>
