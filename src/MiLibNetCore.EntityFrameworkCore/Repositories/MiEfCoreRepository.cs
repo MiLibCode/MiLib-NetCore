@@ -11,75 +11,21 @@ using MiLibNetCore.Domain.Repositories;
 
 namespace MiLibNetCore.EntityFrameworkCore.Repositories
 {
-    //public class EfCoreRepository<TDbContext, TEntity> : RepositoryBase<TEntity>, IEfCoreRepository<TEntity>
-    //    //where TDbContext : IEfCoreDbContext
-    //    where TEntity : class, IEntity
-    //{
-    //    private readonly TDbContext _context;
-
-    //    public EfCoreRepository(TDbContext context)
-    //    {
-    //        _context = context;
-    //    }
-
-    //    /// <inheritdoc />
-    //    public override TEntity Insert(TEntity entity, bool autoSave = false)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    /// <inheritdoc />
-    //    public override TEntity Update(TEntity entity, bool autoSave = false)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    /// <inheritdoc />
-    //    public override void Delete(TEntity entity, bool autoSave = false)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    /// <inheritdoc />
-    //    public override List<TEntity> GetList(bool includeDetails = false)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    /// <inheritdoc />
-    //    public override long GetCount()
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    /// <inheritdoc />
-    //    protected override IQueryable<TEntity> GetQueryable()
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    protected virtual TDbContext DbContext => _context;
-
-    //    /// <inheritdoc />
-    //    DbContext IEfCoreRepository<TEntity>.DbContext => DbContext.As<DbContext>();
-
-    //    /// <inheritdoc />
-    //    public virtual DbSet<TEntity> DbSet => DbContext.Set<TEntity>();
-    //}
-
-    public class EfCoreRepository<TEntity> : RepositoryBase<TEntity>, IEfCoreRepository<TEntity>
-        where TEntity : class, IEntity
+    public class MiEfCoreRepository<TDbContext, TEntity> : RepositoryBase<TEntity>, IEfCoreRepository<TEntity>
+       where TDbContext : DbContext
+       where TEntity : class, IEntity
     {
-        //protected DbContext Context { get; }
-        //private readonly SmartInventContext _context;
-        //protected virtual DbContext DbContext => _dbContextProvider.GetDbContext();
 
-        public EfCoreRepository(DbContext context)
+        public MiEfCoreRepository(TDbContext context)
         {
             DbContext = context;
         }
 
-        /// <inheritdoc />
+        //protected MifCoreRepository()
+        //{
+
+        //}
+
         public override TEntity Insert(TEntity entity, bool autoSave = false)
         {
             var savedEntity = DbSet.Add(entity).Entity;
@@ -237,19 +183,17 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
         }
     }
 
-    public class EfCoreRepository<TEntity, TKey> : EfCoreRepository<TEntity>,
-            IEfCoreRepository<TEntity, TKey> //,
-        //ISupportsExplicitLoading<TEntity, TKey>
-
-        //where TDbContext : IEfCoreDbContext
+    public class MiEfCoreRepository<TDbContext, TEntity, TKey> : MiEfCoreRepository<TDbContext, TEntity>,
+        IEfCoreRepository<TEntity, TKey>
+        where TDbContext : DbContext
         where TEntity : class, IEntity<TKey>
     {
-        /// <inheritdoc />
-        public EfCoreRepository(DbContext context) : base(context)
+        public MiEfCoreRepository(TDbContext context)
+            : base(context)
         {
+
         }
 
-        /// <inheritdoc />
         public virtual TEntity Get(TKey id, bool includeDetails = true)
         {
             var entity = Find(id, includeDetails);
@@ -262,7 +206,6 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
             return entity;
         }
 
-        /// <inheritdoc />
         public virtual async Task<TEntity> GetAsync(TKey id, bool includeDetails = true, CancellationToken cancellationToken = default)
         {
             var entity = await FindAsync(id, includeDetails, GetCancellationToken(cancellationToken));
@@ -275,7 +218,6 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
             return entity;
         }
 
-        /// <inheritdoc />
         public virtual TEntity Find(TKey id, bool includeDetails = true)
         {
             return includeDetails
@@ -283,7 +225,6 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
                 : DbSet.Find(id);
         }
 
-        /// <inheritdoc />
         public virtual async Task<TEntity> FindAsync(TKey id, bool includeDetails = true, CancellationToken cancellationToken = default)
         {
             return includeDetails
@@ -291,7 +232,6 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
                 : await DbSet.FindAsync(new object[] { id }, GetCancellationToken(cancellationToken));
         }
 
-        /// <inheritdoc />
         public virtual void Delete(TKey id, bool autoSave = false)
         {
             var entity = Find(id, includeDetails: false);
@@ -303,7 +243,6 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
             Delete(entity, autoSave);
         }
 
-        /// <inheritdoc />
         public virtual async Task DeleteAsync(TKey id, bool autoSave = false, CancellationToken cancellationToken = default)
         {
             var entity = await FindAsync(id, includeDetails: false, cancellationToken: cancellationToken);
@@ -315,6 +254,4 @@ namespace MiLibNetCore.EntityFrameworkCore.Repositories
             await DeleteAsync(entity, autoSave, cancellationToken);
         }
     }
-
-   
 }
