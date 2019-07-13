@@ -10,10 +10,10 @@ using MiLibNetCore.Threading;
 namespace MiLibNetCore.Domain.Repositories
 {
     public abstract class BasicRepositoryBase<TEntity> :
-        IBasicRepository<TEntity>,
+        IBasicRepository<TEntity>//,
         //IServiceProviderAccessor,
         //IUnitOfWorkEnabled,
-        ITransientDependency
+        //ITransientDependency
         where TEntity : class, IEntity
     {
         //public IServiceProvider ServiceProvider { get; set; }
