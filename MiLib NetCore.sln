@@ -24,6 +24,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.Domain", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiLibNetCore.EntityFrameworkCore", "src\MiLibNetCore.EntityFrameworkCore\MiLibNetCore.EntityFrameworkCore.csproj", "{AFB6997F-02CA-48DB-8297-A21955C4CAC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibNetCore.AspNetCore", "MiLibNetCore.AspNetCore\MiLibNetCore.AspNetCore.csproj", "{CFEB22B0-787B-445E-B7E4-C1454924C992}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFB6997F-02CA-48DB-8297-A21955C4CAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFEB22B0-787B-445E-B7E4-C1454924C992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEB22B0-787B-445E-B7E4-C1454924C992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEB22B0-787B-445E-B7E4-C1454924C992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEB22B0-787B-445E-B7E4-C1454924C992}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{B9F9DAC6-A12C-4300-B27C-C660A94AB7D7} = {88E9410B-223B-4185-AD3E-3EDFDC83A57D}
 		{ACB93F37-5309-4DBB-97CD-4DDA6ED7B9F9} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
 		{AFB6997F-02CA-48DB-8297-A21955C4CAC5} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
+		{CFEB22B0-787B-445E-B7E4-C1454924C992} = {51BC64DB-9DB0-465B-AE29-3203D23E3D49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34B8C4A4-5CE7-42CD-B6E8-5C18F7D749C8}
